@@ -3,7 +3,7 @@ using namespace std;
 
 // global variables 
 unsigned char board[3][3] = { {'1', '2', '3'}, {'4', '5', '6'}, {'7', '8', '9'} };
-unsigned char current_maker = 'X';
+unsigned char current_marker = 'X';
 unsigned int current_player = 1;
 unsigned int rounds = 0;
 bool isWinner = false;
@@ -18,6 +18,8 @@ int main(){
     // Game initialization
     int number;
     draw_board();
+
+    
 
     while (1)
     {
@@ -38,7 +40,7 @@ int main(){
         }
 
         
-        board[0][number-1]= current_maker;
+        board[0][number-1]= current_marker;
         cout << endl;
         cout << endl;
         draw_board();
@@ -74,12 +76,12 @@ void draw_board(){
 }
 
 void change_players(){
-    if(current_maker == 'X'){
-        current_maker = 'O';
+    if(current_marker == 'X'){
+        current_marker = 'O';
         current_player = 2;
     }
     else{
-        current_maker = 'X';
+        current_marker = 'X';
         current_player = 1;
     }
 }

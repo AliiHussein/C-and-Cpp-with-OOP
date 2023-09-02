@@ -2,7 +2,7 @@
 
 // global variables 
 unsigned char board[3][3] = { {'1', '2', '3'}, {'4', '5', '6'}, {'7', '8', '9'} };
-unsigned char current_maker = 'X';
+unsigned char current_marker = 'X';
 unsigned int current_player = 1;
 unsigned int rounds = 0;
 char isWinner = 0;
@@ -35,7 +35,7 @@ int main(){
         }
 
         
-        board[0][number-1]= current_maker;
+        board[0][number-1]= current_marker;
         printf("\n");
         printf("\n");
         draw_board();
@@ -72,11 +72,11 @@ void draw_board(){
 
 void change_players(){
     if(current_maker == 'X'){
-        current_maker = 'O';
+        current_marker = 'O';
         current_player = 2;
     }
     else{
-        current_maker = 'X';
+        current_marker = 'X';
         current_player = 1;
     }
 }
