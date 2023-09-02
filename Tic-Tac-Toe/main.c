@@ -23,11 +23,12 @@ int main(){
     while (1)
     {
         printf("Player %d turn\n", current_player);
+
         printf("Enter a number: ");
         scanf("%d", &number);
 
         if(number < 1 || number > 9){
-            printf("Invalid number/place, out of bounds\n");
+            printf("Invalid number: Choose a number between 1 & 9\n");
             continue;
         }
 
@@ -151,6 +152,6 @@ void choose_your_marker(){
         printf("Player 2 -> X\n");
     }
     printf("\n");
-    print("Game Started\n");
+    printf("Game Started\n");
     printf("\n");
 }
