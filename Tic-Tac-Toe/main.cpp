@@ -12,14 +12,14 @@ bool isWinner = false;
 void draw_board(void);
 void change_players(void);
 void winner_check(void);
+void choose_your_marker(void);
 
 int main(){
 
     // Game initialization
+    choose_your_marker();
     int number;
     draw_board();
-
-    
 
     while (1)
     {
@@ -30,7 +30,7 @@ int main(){
 
 
         if(number < 1 || number > 9){
-            cout << "Invalid number/place, out of bounds" << endl;
+            cout << "Invalid number: Choose a number between 1 & 9" << endl;
             continue;
         }
 
@@ -78,10 +78,15 @@ void draw_board(){
 void change_players(){
     if(current_marker == 'X'){
         current_marker = 'O';
-        current_player = 2;
     }
     else{
         current_marker = 'X';
+    }
+
+    if(current_player == 1){
+        current_player = 2;
+    }
+    else{
         current_player = 1;
     }
 }
@@ -129,4 +134,26 @@ void winner_check(){
         isWinner = true;
     } 
 
+}
+
+void choose_your_marker(){
+    unsigned int marker;
+
+    cout << "1 -> X,  2 -> O" << endl;
+    cout << "Choose your marker: ";
+    cin >> marker;
+
+    if(marker == 1){
+        current_marker = 'X';
+        cout << "Player 1 -> X" << endl;
+        cout << "Player 2 -> O" << endl;
+    }
+    else{
+        current_marker = 'O';
+        cout << "Player 1 -> O" << endl;
+        cout << "Player 2 -> X" << endl;
+    }
+    cout << endl;
+    cout << "Gamed Started" << endl;
+    cout << endl;
 }

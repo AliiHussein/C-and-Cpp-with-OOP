@@ -11,10 +11,12 @@ char isWinner = 0;
 void draw_board(void);
 void change_players(void);
 void winner_check(void);
+void choose_your_marker(void);
 
 int main(){
 
     // Game initialization
+    choose_your_marker();
     int number;
     draw_board();
 
@@ -71,12 +73,17 @@ void draw_board(){
 }
 
 void change_players(){
-    if(current_maker == 'X'){
+    if(current_marker == 'X'){
         current_marker = 'O';
-        current_player = 2;
     }
     else{
         current_marker = 'X';
+    }
+
+    if(current_player == 1){
+        current_player = 2;
+    }
+    else{
         current_player = 1;
     }
 }
@@ -124,4 +131,23 @@ void winner_check(){
         isWinner = 1;
     } 
 
+}
+
+void choose_your_marker(){
+    unsigned int marker;
+
+    printf("1 -> X,  2 -> O\n");
+    printf("Choose your marker: ");
+    scanf("%d", &marker);
+
+    if(marker == 1){
+        current_marker = 'X';
+        printf("Player 1 -> X\n");
+        printf("Player 2 -> O\n");
+    }
+    else{
+        current_marker = 'O';
+        printf("Player 1 -> O\n");
+        printf("Player 2 -> X\n");
+    }
 }
