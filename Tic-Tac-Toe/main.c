@@ -150,4 +150,7 @@ void choose_your_marker(){
         printf("Player 1 -> O\n");
         printf("Player 2 -> X\n");
     }
+    printf("\n");
+    print("Game Started\n");
+    printf("\n");
 }
