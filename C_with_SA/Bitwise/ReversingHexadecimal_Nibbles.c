@@ -14,12 +14,12 @@ typedef unsigned char uint8;
 void main(){
 	uint8 num;
 	uint8 reversed = 0;
-	scanf("%d", &num);
+	scanf("%x", &num);
 
 
-	for(int i = 0; i < 8; i++){
-		reversed |= (((num >> 7-i) & 1) << i);
+	for(int i = 0; i < 2; i++){
+		reversed |= (((num >> (4-(i*4) )) & 15) << i*4);
 	}
 
-	printf("Reversed: %d\n", reversed);
+	printf("Reversed: %x\n", reversed);
 }
