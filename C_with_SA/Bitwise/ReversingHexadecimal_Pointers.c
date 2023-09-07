@@ -19,7 +19,7 @@ void main(){
 
 	uint8 *p = &num;
 
-	reversed = *(p+1);
+	reversed = (*(p) << 8) | *(p+1);
 
 
 	printf("Reversed: %x\n", reversed);
