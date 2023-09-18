@@ -5,3 +5,7 @@ int my_strlen(const char * s){
     for(; s[i] != '\0'; i++);
     return i;
 }
+
+void my_strcpy(char* destination, const char* soruce){
+    
+}
