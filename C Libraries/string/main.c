@@ -6,15 +6,15 @@
 void main(){
     char s[20];
     char s2[20];
+    int num;
+
+    printf("Enter s: ");
     scanf("%[^\n]%*c", s);
 
-    strcpy(s2, s);
+    printf("Enter num: ");
+    scanf("%d", &num);
 
-    printf("Original Strcpy: s: %s    s2: %s \n",s,s2);
+    my_strncpy(s2, s, num);
 
-    scanf("%[^\n]%*c", s);
-
-    my_strcpy(s2, s);
-
-    printf("My Strcpy: s: %s    s2: %s \n",s,s2);
+    printf("My Strncpy: s: %s    s2: %s \n",s,s2);
 }
