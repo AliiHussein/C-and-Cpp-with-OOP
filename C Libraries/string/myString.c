@@ -7,5 +7,9 @@ int my_strlen(const char * s){
 }
 
 void my_strcpy(char* destination, const char* soruce){
-    
+    int i;
+    for(i = 0; soruce[i] != '\0'; i++){
+        destination[i] = soruce[i];
+    }
+    destination[i] = '\0'; 
 }
