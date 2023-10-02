@@ -6,18 +6,20 @@ int my_strlen(const char * s){
     return i;
 }
 
-void my_strcpy(char* dest, const char* src){
+char * my_strcpy(char* dest, const char* src){
     int i;
     for(i = 0; src[i] != '\0'; i++){
         dest[i] = src[i];
     }
     dest[i] = '\0'; 
+    return dest;
 }
 
-void my_strncpy(char *dest, const char *src, unsigned long long n){
+char * my_strncpy(char *dest, const char *src, unsigned long long n){
     int i;
     for(i = 0; (i < n) && (src[i] != '\0'); i++){
         dest[i] = src[i];
     }
     dest[i] = '\0'; 
+    return dest;
 }

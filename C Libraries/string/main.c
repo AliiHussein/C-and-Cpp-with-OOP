@@ -14,7 +14,5 @@ void main(){
     printf("Enter num: ");
     scanf("%d", &num);
 
-    my_strncpy(s2, s, num);
-
-    printf("My Strncpy: s: %s    s2: %s \n",s,s2);
+    printf("My Strncpy: s: %s    s2: %s \n",s,my_strncpy(s2, s, num));
 }
