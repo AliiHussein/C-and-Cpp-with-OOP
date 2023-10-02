@@ -11,8 +11,12 @@ void main(){
     printf("Enter s: ");
     scanf("%[^\n]%*c", s);
 
-    printf("Enter num: ");
-    scanf("%d", &num);
+    printf("Enter s2: ");
+    scanf("%[^\n]%*c", s2);
 
-    printf("My Strncpy: s: %s    s2: %s \n",s,my_strncpy(s2, s, num));
+    // printf("Enter num: ");
+    // scanf("%d", &num);
+    my_strcat(s2, s);
+
+    printf("My Strcat: %s\n",s2);
 }

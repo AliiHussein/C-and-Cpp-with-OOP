@@ -4,5 +4,5 @@
 int my_strlen(const char * s);
 char * my_strcpy(char* dest, const char* src);
 char * my_strncpy(char *dest, const char *src, unsigned long long n);
-char *strcat(char *dest, const char *src); 
+char *my_strcat(char *dest, const char *src); 
 #endif /* MYSTRING_H_*/
